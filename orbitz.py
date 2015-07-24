@@ -1,9 +1,11 @@
 __author__ = 'royalfiish'
 from selenium import webdriver
+import time
 
+# Create object webdriver
 wd = webdriver.Firefox()
 wd.get('http://www.orbitz.com')
-
+time.sleep(4)
 wd.find_element_by_id('search.type.air').click()
 wd.find_element_by_name('ar.rt.leaveSlice.orig.key').send_keys('LAX')
 wd.find_element_by_name('ar.rt.leaveSlice.dest.key').send_keys('BOS')
